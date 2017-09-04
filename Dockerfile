@@ -26,7 +26,7 @@ RUN curl http://www.mega-nerd.com/SRC/libsamplerate-0.1.8.tar.gz --output - | ta
 
 RUN git clone https://github.com/dpwe/audfprint.git
 
-ENTRYPOINT ["python", "audfprint/audfprint.py"]
+CMD ["python", "audfprint/audfprint.py"]
 
 RUN rm -fr audfprint/.git && rm -f libsamplerate-0.1.8.tar.gz && rm -fr libsamplerate-0.1.8 66 \
     rm -r /root/.cache && apk del .build-dependencies && rm -rf /var/cache/apk/*
